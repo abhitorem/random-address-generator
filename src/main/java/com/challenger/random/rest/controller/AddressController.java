@@ -36,7 +36,6 @@ public class AddressController {
     ResponseEntity<Address> getEncryptedToken() throws JsonProcessingException {
         Randomizer randomizer = new Randomizer(new Locale("US"));
         Map fields = getRandomObjects(randomizer).get(0).getFields();
-        //        model.addAttribute("values", randomObjects);
         Address address = new Address()
             .setHouse(String.valueOf(fields.get("secondaryAddress")))
             .setStreet(String.valueOf(fields.get("streetAddress")))
