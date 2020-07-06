@@ -1,6 +1,7 @@
-package com.challenger.random.model;
+package com.challenger.random.service;
 
 import com.challenger.random.AbstractRandomTest;
+import com.challenger.random.model.Randomizer;
 import org.junit.Test;
 
 import java.util.Locale;
