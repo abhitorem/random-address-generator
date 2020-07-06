@@ -33,7 +33,7 @@ public class AddressController {
             @ApiResponse(code = 403, message = "Permission Denied.", response = String.class),
             @ApiResponse(code = 500, message = "Internal Server Error", response = Void.class) })
     @RequestMapping(value = "/address", produces = { "application/json" }, method = RequestMethod.GET)
-    ResponseEntity<Address> getEncryptedToken() throws JsonProcessingException {
+    ResponseEntity<Address> getRandomAddress() throws JsonProcessingException {
         Randomizer randomizer = new Randomizer(new Locale("US"));
         Map fields = getRandomObjects(randomizer).get(0).getFields();
         Address address = new Address()
